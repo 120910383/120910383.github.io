@@ -77,6 +77,88 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-hello-world-nodejs" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/10/30/hello-world-nodejs/" class="article-date">
+  <time datetime="2014-10-30T03:19:33.000Z" itemprop="datePublished">10月 30 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NodeJS/">NodeJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/30/hello-world-nodejs/">与Node.js的第一次接触</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>离职之后这段时间，慢慢的心态调整过来了，对什么都有兴趣，什么都想学，由于之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，反正之前是对web开发抱有不屑的想法，不过慢慢的在最近几年工作中接触到了一些脚本语言之后，发现每种语言都有其各自适用的地方，想写个小工具整理下文件用C简直是自虐，想写个小一点的测试用的http服务器直接用C++、boost::asio又会有种杀鸡用牛刀的感觉，后来用AndroidStudio真真正正开发了一款android app之后，才觉得学百家之长进而达到无招胜有招才是最光明最有前途的想法，于是发了疯似的开始看html5、css3、javascript三贱客，这不现在又开始接触Node了，而且在近一个月的学习中，逐渐发现了一个惊天结论——哈哈自己感受，javascript这个之前很不屑的小东西将来很有可能实现前段后端移动端大统一。</p>
+<p>作为一个C/C++程序员，这样来说太灭自家门面了，但是不得不承认javascript的势头实在是越来越旺，服务器端的node.js，浏览器的dom模型，以及跨移动端android、ios、wp8的webview，全部都可以用javascript来写，甚至一些轻度的社交游戏，都可以用cocos2d-x新出的javascript框架引擎开发，所以对于个人或者小规模团队来说使用javascript能够快速的构建整个产品线。</p>
+<p>说到这里，我觉得现在学javascript都有点太迟了，如果用一个比喻的话，C/C++就是一个德高望重的老头，严谨并且有经验能力高，而javascript、ruby之类的就如同嘻嘻哈哈的运动少年，给人很多的新鲜感和活力，说到这里就想提下ruby，因为它是给我惊喜让我走出C/C++的第一个语言，记得最开始接触它的时候，有一句话印象非常深刻——<strong>所有事物都是对象</strong>，当时根本不能想象循环可以这样使用</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ruby代码</span></div><div class="line"><span class="comment"># 循环五次输出hello,world</span></div><div class="line"><span class="number">5</span>.times <span class="keyword">do</span></div><div class="line">  print <span class="string">"hello,world/n"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
+
+<p>加上别人的说法和自己亲身感受，ruby真的像是艺术家用的语言，非常文艺和有美感，不过后来很可惜，由于当时仅仅是感兴趣，并没有实际的项目驱动来使用ruby，导致没有再继续深入的学习下去，加上那段时间工作比较忙，和ruby的接触算是告一段落。而对于javascript的学习，则是由于最近开发的应用需要服务端支持，用C++吧太大材小用，而且各种库boost、poco的调用又比较复杂，很多还要现学，没有经验直接写服务器很难稳定，加上仅仅是应用服务器而已，就限定在脚本语言中去找，找来找去就定下了同样使用Javascript的备受推崇的Node.js。</p>
+<h2 id="Node-js在windows下的安装">Node.js在windows下的安装</h2>
+<p>Node.js简单来说，就是一个让javascript跑在浏览器之外的一个运行环境，由于其对网络的支持非常完善，所以大都被用在服务器开发上，Node.js的官网是<a href="http://www.nodejs.org/" target="_blank" rel="external">http://www.nodejs.org/</a> ，从上面下载windows安装包一直点下一步即可安装，安装完成后在命令行里输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node --version</div></pre></td></tr></table></figure>
+
+<p>出现版本号则说明安装成功</p>
+<h2 id="WebStrom9的安装">WebStrom9的安装</h2>
+<p>在windwows下开发没有一个好的IDE工具是很痛苦的事情，开发C/C++使用微软的visual studio已经是共识了，但是对于非.net的web开发，我这里强烈推荐一个东西就是webstorm，官网是<a href="http://www.jetbrains.com/webstorm/" target="_blank" rel="external">http://www.jetbrains.com/webstorm/</a> ，开发公司是jetbrains，这个公司开发的几款IDE都是非常不错的，我现在正在使用的AndroidStudio就是Google基于该公司的产品开发出来的，所以如果你是windows开发者，想在windows下找一款稍微可以和微软抗衡的开发工具，就去jetbrains的主页上找找看吧，总有一款你能用得到的。</p>
+<p>这里说明安装方法，其实只要是在windows下，安装都很简单，一直下一步就可以了，最后一步启动时会让你选择按键和主题，我的按键类型选择的是visual studio，主题选择的是Darcula，最后的启动界面是这样子的<br><img src="images/webstorm_start_page.png" alt="WebStorm启动界面"></p>
+<h2 id="创建Node-js项目">创建Node.js项目</h2>
+<p>接下来要讨论的都是基于WebStrom开发环境的一些操作，node.js的命令行式的编辑运行就不说了，事实上我既不擅长也不太感兴趣，在windows上开发本来就是享受鼠标点来点去的感觉，非要做的类似vim式的黑客手法，实在是做不来，不过由于IDE毕竟功能有限，对于WebStrom不提供的一些操作，还是需要在命令行里执行命令的，一切以方便为准。</p>
+<p>首先在webstrom的开始界面上选择”Create New Project”接下来会弹出<br><img src="images/webstrom_create_new_project.png" alt="WebStom新建项目"><br>为了更好的演示，这里选择”Empty project”，确定后建立项目，这时在文件夹下面除了.idea项目配置文件外，是没有任何文件生成的，需要我们新建一个javascript来执行，在左侧项目上右键New=&gt;JavaScript File建立一个helloworld.js文件，然后写入如下代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// javascript代码</span></div><div class="line"><span class="comment">// 返回本次请求头信息的http服务端</span></div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>{</div><div class="line">  response.write(<span class="built_in">JSON</span>.stringify(request.headers));</div><div class="line">  response.end();</div><div class="line">}).listen(<span class="number">8888</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server start at 8888'</span>);</div></pre></td></tr></table></figure>
+
+<p>输入完成后，执行菜单run=&gt;run…选择该文件执行，就这样，一个微型的http服务器就建成了，打开浏览器访问localhost:8888即可看到请求头信息，不需要apache,nginx之类的http服务器帮助，node本身已经内置了监听http请求的功能，下面来说一下这几句代码的作用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div></pre></td></tr></table></figure>
+
+<p>这句类似于C/C++中的include，java中的import，都是引入外部功能，但是有没有注意到，这里require会返回一个值，这个值其实是代表了一个模块，这个模块是哪里定义的呢，就是http这个外部文件里定义的，它返回了一个对象，我们可以用这个对象做特定的事情，这一点和其他语言还是有很大区别的，这里的http是Node.js内置的一个提供http相关的功能模块，不妨把它理解为一个内置类，通过require生成了一个对象吧，即使到后面你会发现他们的概念差别还是挺大的，但这样毕竟有助于理解。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> server = http.createServer(callback);</div></pre></td></tr></table></figure>
+
+<p>使用http对象的createServer方法创建一个server对象，这个创建方法接受一个带两个参数的回调函数(事实上，在javascript中参数个数非常自由，远远比C/C++灵活太多)，这个回调函数什么时候会被调用到呢，由于我们创建的是http服务器，当然是在客户端请求到来的时候被调用，调用的时候帮我们预置了两个参数，第一个是请求信息，让我们来读的，比如请求的路径啊，请求的方式啊之类的，第二个参数是让我们来写的，就是我们根据客户端请求的指令返回给浏览器显示的东西，当然最普通的就是返回一段html代码了。</p>
+<p>于是，这个server对象就被创建了，他内部包含一个在客户端请求的时候会去调用的一个函数，但是这个server还没有启动呢，如果这时代码结束，那么运行到这里也就结束了，我们知道，服务器程序是一个“死循环”，它不能够运行一下就结束掉的，它需要一直去监听着有没有人来请求我之类的，所以这个时候我们需要下面的代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">server.listen(<span class="number">8888</span>);</div></pre></td></tr></table></figure>
+
+<p>顾名思义，让server去监听服务器上的8888的端口，listen函数会创建一个事件监听器，来监听请求事件，可以使得运行我们这段代码的node程序不会退出“死循环”，这两段代码合起来就是</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>{</div><div class="line">  response.end();</div><div class="line">}).listen(<span class="number">8888</span>);</div></pre></td></tr></table></figure>
+
+<p>可以省下声明一个server变量代码，这时回到我们传送给server对象的函数体里了，这里面的代码在服务器启动的时候是不会执行到的，而是在客户端请求的时候才去执行，每次请求都要执行一遍，假如你这个服务器在一秒钟内有十万人同时请求，那么这个函数在这一秒钟内会被调用十万次，每次调用都服务于每个访问你服务器的人，当然你会说，我服务器性能哪有那么厉害，那就只能等待了，前面请求的人先处理，后面的人总要等待前面的人处理了才能进到这个函数里得到想要的信息，这一点非常重要，和其他服务器程序不同，Node闻名的单线程服务器就是这样来的，<strong>你无法编写任何代码来执行并发</strong>，像其他语言的服务器程序可能会开十个或二十个线程，让服务器CPU一次同时处理多个请求，但是在Node里，一次只能处理一个请求，处理一个请求的时候就会阻塞后面所有的请求，所以说一定不要在这个函数和子函数中执行复杂耗时的操作，其他几万人等你一个人的压力还是蛮大的。说到这里，可能会有疑问，那怎么办，我有些操作就是很费时间，比如读文件，请求数据库，从其他网络上二次请求，别担心，Node虽然不是多线程，但是它把异步这种思想发挥到了极限，可以这么说，<strong>除了你的代码是单线程的，其余都是多线程</strong>，哈哈，迷糊了吧，后面如果有时间会逐步介绍，这里先卖个关子。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">response.write(<span class="built_in">JSON</span>.stringify(request.headers));</div><div class="line">response.end();</div></pre></td></tr></table></figure>
+
+<p>response.write()函数是把返回给浏览器显示的信息写入响应体，可以是文本，html代码，二进制数据等。response.end()是告诉Node，所有本次请求的数据我都写好了，你可以返回给浏览器看了。JSON.stringify()方法是序列化一个对象成字符串输入，这里是把request对象的headers成员序列化成字符串了。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server start at 8888'</span>);</div></pre></td></tr></table></figure>
+
+<p>最后一句是控制台输出命令，调试使用的，表示现在程序执行到这段代码处了，同时给出相应的说明。</p>
+<p>至此，这段简洁而不简单的Node写成的http高效服务器就介绍完了，后面我也会不定时的把自己学习Node的心得写上来，一是分享给搜索引擎帮助更多人，二是通过写的方式梳理自己理解的知识，加深印象。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://120910383.github.io/2014/10/30/hello-world-nodejs/" data-id="r8arol41rs4gzuqe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-world/">hello world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-my-first-blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/29/my-first-blog/" class="article-date">
@@ -104,21 +186,23 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="开始">开始</h2>
-<p>最近一段时间在搞node.js，又一次不经意间翻到hexo这个小东西，再加上之前一直想做一个记录自己学习开发和生活的博客，今天正好懒的码代码了，就抽时间拿来研究了一下，折腾了一下午，终于搞清楚了一些基本的设置项，然后用它生成纯静态的网页，部署到了我的github上当作博客用了，现在看到的这篇“hello world”就是第一次用hexo发布的。</p>
+<p>最近一段时间在搞<a href="http://www.nodejs.org/" title="官网" target="_blank" rel="external">node.js</a>，又一次不经意间翻到<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>这个小东西，再加上之前一直想做一个记录自己学习开发和生活的博客，今天正好懒的码代码了，就抽时间拿来研究了一下，折腾了一下午，终于搞清楚了一些基本的设置项，然后用它生成<a href="http://baike.baidu.com/view/348763.htm/" title="什么是静态网页" target="_blank" rel="external">纯静态的网页</a>，部署到了<a href="https://github.com/120910383/" title="我的github" target="_blank" rel="external">我的github</a>上当作博客用了，现在看到的这篇“hello world”就是第一次用<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>发布的。</p>
 <h2 id="回顾">回顾</h2>
-<p>关于博客，我记得上大学的时候就有过写的想法，那时候正好有个QZone比较流行，周围同学也都在用它，自己偶尔也会写一点东西，现在想想确实提供了很大便利，不用自己架站写html就能发表文章展示自己。不过后来渐渐觉得用腾讯的东西太低格(帅哥美女装扮什么的太花哨)，于是转战新浪博客，这算是第一次真正意义上的博客吧，功能朴实专业多了，不过最后还是没坚持下来，写了几篇文章后就搁在那几年没动了，之后开过纯技术的csdn博客，也是三篇不到就放弃，也尝试过搭建wordpress，发现驾驭不了，太复杂，光写文章都嫌费事还要处理一个网站，尤其附带着数据库，php脚本什么的，想想都麻烦，结果也不了了之。直到去年，才接触到了这么一个东西——静态网页生成器，发现确实是我想要的功能，使用Markdown语法写html能省下不少事情，最重要的是，生成的文章全部都是一篇一篇静态的网页，非常清爽。</p>
-<p>不过最开始接触的倒不是hexo，而是jekyll，一款ruby写的博客程序，后者是在去年年底看github文档的时候了解的，github也对其提供了官方支持，也下载下来尝试了一番，不过当时对ruby不熟悉，总感觉对它的开发语言不了解的情况下用起来会有一种恐惧感，不晓得哪天出问题不会处理，再加上自己的懒惰，就一直没动它。直到最近开始学node.js开发，才又接触了hexo，于是又一次的建了一个新的博客，我想这次应该是要坚持写下去了。</p>
+<p>关于博客，我记得上大学的时候就有过写的想法，那时候正好有个<a href="http://user.qzone.qq.com/120910383/" title="我的QZone" target="_blank" rel="external">QZone</a>比较流行，周围同学也都在用它，自己偶尔也会写一点东西，现在想想确实提供了很大便利，不用自己架站写<a href="http://baike.baidu.com/view/383720.htm/" title="什么是html" target="_blank" rel="external">html</a>就能发表文章展示自己。不过后来渐渐觉得用腾讯的东西太低格(帅哥美女装扮什么的太花哨)，于是转战新浪博客，这算是第一次真正意义上的博客吧，功能朴实专业多了，不过最后还是没坚持下来，写了几篇文章后就搁在那几年没动了，之后开过纯技术的<a href="http://blog.csdn.net/youyana1/" title="我的csdn博客" target="_blank" rel="external">csdn博客</a>，也是三篇不到就放弃，也尝试过搭建<a href="http://cn.wordpress.org/" title="官网" target="_blank" rel="external">wordpress</a>，发现驾驭不了，太复杂，光写文章都嫌费事还要处理一个网站，尤其附带着数据库，<a href="http://php.net/" title="官网" target="_blank" rel="external">php</a>脚本什么的，想想都麻烦，结果也不了了之。直到去年，才接触到了这么一个东西——静态网页生成器，发现确实是我想要的功能，使用<a href="http://wowubuntu.com/markdown/" title="markdown快速入门" target="_blank" rel="external">markdown</a>语法写<a href="http://baike.baidu.com/view/383720.htm/" title="什么是html" target="_blank" rel="external">html</a>能省下不少事情，最重要的是，生成的文章全部都是一篇一篇<a href="http://baike.baidu.com/view/348763.htm/" title="什么是静态网页" target="_blank" rel="external">静态的网页</a>，非常清爽。</p>
+<p>不过最开始接触的倒不是<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，而是<a href="http://jekyllcn.com/" title="jekyll中文镜像" target="_blank" rel="external">jekyll</a>，一款<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>写的博客程序，后者是在去年年底看<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>文档的时候了解的，<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>也对其提供了官方支持，也下载下来尝试了一番，不过当时对<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>不熟悉，总感觉对它的开发语言不了解的情况下用起来会有一种恐惧感，不晓得哪天出问题不会处理，再加上自己的懒惰，就一直没动它。直到最近开始学<a href="http://www.nodejs.org/" title="官网" target="_blank" rel="external">node.js</a>开发，才又接触了<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，于是又一次的建了一个[新的博客][]，我想这次应该是要坚持写下去了。</p>
 <h2 id="关于博客这些事">关于博客这些事</h2>
 <p>上面说了那么多，之前一直没坚持下来，外部原因是一方面，其实我自己也知道，真正的原因是，我一直都不太喜欢展示自己，包括经历了什么事，或是自己的看法、感想之类的。总觉得自己这样完完全全被别人看到、评论、不屑、甚至反对是一件很不自在的事情，我也不愿意别人看到我过的不好，过的很屌丝，过的非常乏味。把自己隐藏起来多好，包裹的厚厚的，很神秘很深沉的样子，别人不知道你的性格，不知道你的经历，即便交朋友你在网络上也完完全全是一个化身，和现实生活完全区分开来。可是，生活中的一些事情，编程中一些问题，和绞尽脑汁豁然开朗的解决方法，又让我一直有一种很强烈的写作欲望，想把它们分享出去，一方面希望获得别人的认可，给自己进一步的动力，另一方面，将来无论求职认识朋友，都是一个可以让对方快速了解自己的渠道，再者就是将来可以有一个让自己回顾过去经历的地方。</p>
 <h2 id="计划">计划</h2>
-<p>hexo是个好东西，虽然花了一下午只了解了个大概，但是已经勾起我的兴趣，我会在以后边用边进行二次开发吧，现在用的是自带的landscape主题，希望慢慢的能设计出自己喜欢的风格，暂时先这样显示着吧</p>
+<p><a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>是个好东西，虽然花了一下午只了解了个大概，但是已经勾起我的兴趣，我会在以后边用边进行二次开发吧，现在用的是自带的<a href="https://github.com/hexojs/hexo-theme-landscape" title="github代码托管地址" target="_blank" rel="external">landscape</a>主题，随后抽时间用用一款国人优化过的叫<a href="https://github.com/xiangming/landscape-plus" title="github代码托管地址" target="_blank" rel="external">landscape-plus</a>的衍生品，并且希望能慢慢的设计出自己喜欢的风格，今天就暂时先这样显示着吧。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://120910383.github.io/2014/10/29/my-first-blog/" data-id="xzdoh1tla7y14508" class="article-share-link">Share</a>
+      <a data-url="http://120910383.github.io/2014/10/29/my-first-blog/" data-id="tceopcly5e1hc0jb" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/landscape/">landscape</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/landscape-plus/">landscape-plus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
+
     </footer>
   </div>
   
@@ -135,20 +219,34 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/other/">其他</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">其他</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/">hello world</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape/">landscape</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape-plus/">landscape-plus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hello-world/" style="font-size: 10.00px;">hello world</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/landscape/" style="font-size: 10.00px;">landscape</a><a href="/tags/landscape-plus/" style="font-size: 10.00px;">landscape-plus</a><a href="/tags/node-js/" style="font-size: 20.00px;">node.js</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -158,6 +256,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/10/30/hello-world-nodejs/">与Node.js的第一次接触</a>
+          </li>
         
           <li>
             <a href="/2014/10/29/my-first-blog/">我的博客开通了</a>
