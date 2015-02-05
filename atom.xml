@@ -4,7 +4,7 @@
   <subtitle><![CDATA[不懂艺术的程序员不是一名合格的码农]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://120910383.github.io/"/>
-  <updated>2014-10-30T08:50:07.134Z</updated>
+  <updated>2015-02-05T22:15:46.834Z</updated>
   <id>http://120910383.github.io/</id>
   
   <author>
@@ -15,17 +15,102 @@
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[骑行东方绿舟]]></title>
+    <link href="http://120910383.github.io/2014/11/04/cycling-oriental-land/"/>
+    <id>http://120910383.github.io/2014/11/04/cycling-oriental-land/</id>
+    <published>2014-11-04T14:54:54.000Z</published>
+    <updated>2014-11-04T15:13:06.000Z</updated>
+    <content type="html"><![CDATA[<p>今天发神经，早上7点半就起来了，下去吃个早饭后没事干，又不想写代码，想到最近需要锻炼身体减肥，就计划着今天骑行一趟东方绿舟。东方绿舟离我住的地方大概有52公里吧，来回的话100公里多一点，应该可以应付的来，之前一直想着骑远门，又一直下不定决心，买来的山地车就这样白白浪费着歇菜，很不值得，于是，大概在不到10点的样子，推车下楼，出发。<br>顺便提一下朋友的那辆山地车了，大概700元买的吧，二手的，原价1500左右，一年时间内骑了无数地方，滴水湖，崇明岛，环太湖数不清的地方，后来告诉我他的车坏了，坏到不能修的程度，我就想，即便坏了，也是很超值的，陪你那么多美丽的地方，反观我的山地车，2000多块买的，全新的，结果到头来就没怎么骑过远门，印象中就两次，一次去嘉定浏河，来回110公里，是在去年11月份刚买自行车的时候跟群友骑的，还有一次是今年元旦放假，独自一个人骑到湖州，骨头都散了，码表显示152公里，另外都是些不超过20公里的短途骑行，后来算了一下总共加起来不超过500公里吧，从买车到现在有一年时间了，才500公里，想想都不值得，以后要多骑骑了。<br>回到正题，先贴一下行程路线，都是出门前做过功课的<br><img src="/images/storm_heroes_mail.png" alt="东方绿舟路线图"><br>都是根据之前经验，挑的带有非机动车道的主干道，速度能骑起来，免得堵得心慌</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>今天发神经，早上7点半就起来了，下去吃个早饭后没事干，又不想写代码，想到最近需要锻炼身体减肥，就计划着今天骑行一趟东方绿舟。东方绿舟离我住的地方大概有52公里吧，来回的话100公里多一点，应该可以应付的来，之前一直想着骑远门，又一直下不定决心，买来的山地车就这样白白浪费着歇]]>
+    </summary>
+    
+      <category term="骑行" scheme="http://120910383.github.io/tags/%E9%AA%91%E8%A1%8C/"/>
+    
+      <category term="锻炼" scheme="http://120910383.github.io/tags/%E9%94%BB%E7%82%BC/"/>
+    
+      <category term="健身" scheme="http://120910383.github.io/tags/%E5%81%A5%E8%BA%AB/"/>
+    
+      <category term="骑行" scheme="http://120910383.github.io/categories/cycling/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[喜获风暴英雄技术测试资格（alpha版）]]></title>
+    <link href="http://120910383.github.io/2014/11/04/storm-heroes-alpha/"/>
+    <id>http://120910383.github.io/2014/11/04/storm-heroes-alpha/</id>
+    <published>2014-11-04T14:28:07.000Z</published>
+    <updated>2014-11-04T14:56:50.000Z</updated>
+    <content type="html"><![CDATA[<p>真是幸运到家了，之前每次暴雪游戏出新内容的抢码活动都报名了，从来没有成功获得过，上周正在写代码的过程中，QQ邮箱弹出了一条消息，说我获得风暴英雄内测激活码了，那个激动啊，立马进邮箱查看，按照说明登录战网激活，好好感受了一下，让小伙伴们羡慕的了，后来淘宝上查了一下，发现这个激活码有人卖到200元了，真是奸商啊。<br><img src="/images/storm_heroes_mail.png" alt="测试资格邮件"><br><img src="/images/battlenet_storm.png" alt="战网通行证"><br>这两天一直在玩呢，太丧尸太颓废了，搞得代码都不想写了呢，哎</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>真是幸运到家了，之前每次暴雪游戏出新内容的抢码活动都报名了，从来没有成功获得过，上周正在写代码的过程中，QQ邮箱弹出了一条消息，说我获得风暴英雄内测激活码了，那个激动啊，立马进邮箱查看，按照说明登录战网激活，好好感受了一下，让小伙伴们羡慕的了，后来淘宝上查了一下，发现这个激]]>
+    </summary>
+    
+      <category term="Heroes of the Storm" scheme="http://120910383.github.io/tags/Heroes-of-the-Storm/"/>
+    
+      <category term="Game" scheme="http://120910383.github.io/tags/Game/"/>
+    
+      <category term="alpha" scheme="http://120910383.github.io/tags/alpha/"/>
+    
+      <category term="风暴英雄" scheme="http://120910383.github.io/tags/%E9%A3%8E%E6%9A%B4%E8%8B%B1%E9%9B%84/"/>
+    
+      <category term="游戏" scheme="http://120910383.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+      <category term="游戏" scheme="http://120910383.github.io/categories/game/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Express的静态动态视图助手]]></title>
+    <link href="http://120910383.github.io/2014/11/03/express-static-dynamic-helpers/"/>
+    <id>http://120910383.github.io/2014/11/03/express-static-dynamic-helpers/</id>
+    <published>2014-11-03T04:15:59.000Z</published>
+    <updated>2014-11-04T14:06:02.000Z</updated>
+    <content type="html"><![CDATA[<p>Node.js的视图模板EJS经常需要访问程序代码中的值或者函数调用，一种方式是通过render传参数来让视图获取对象，但是如果一些经常用到的，每次渲染视图的时候都传就不太推荐了，今天看到了一个静态视图助手(dynamicHelpers)和动态视图助手(helpers)的概念，有一些心得，记录一下。</p>
+<h2 id="Express_2-x">Express 2.x</h2>
+<p>静动态视图助手在express的3.x版本中改动比较大，这里先回顾一下旧有版本的概念。<br><strong>静态视图助手(helpers)</strong>: 可以是任何类型的对象，包括接受任意参数的函数，但是访问到的对象必须是与用户请求无关的。<br><strong>动态视图助手(dynamicHelpers)</strong>: 只能是一个函数，这个函数不能接受参数，但是可以访问req和res对象。<br>代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 允许在views视图代码(如ejs文件)中访问test对象和add函数了，这个函数是个静态的，只提供和本次请求无关的功能</span></div><div class="line">app.helpers({</div><div class="line">  test: custom,</div><div class="line">  add: <span class="function"><span class="keyword">function</span><span class="params">(a, b)</span> </span>{</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">  }</div><div class="line">});</div><div class="line"></div><div class="line"><span class="comment">// 允许在views视图代码(如ejs文件)中访问query函数了，这个函数是动态的，可以获取到当前请求的query字段</span></div><div class="line">app.dynamicHelpers({</div><div class="line">  query: <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> </span>{</div><div class="line">    <span class="keyword">return</span> req.query;</div><div class="line">  }</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<h2 id="Express_3-x+">Express 3.x+</h2>
+<p>在Express 3.x中，静动态视图助手的概念稍微不同，自己总结的，不知道对不对。<br><strong>静态视图助手(app.locals)</strong>: 放入app.locals的对象都可以在视图代码中直接访问，这些对象和当前请求信息无关系。<br><strong>动态视图助手(res.locals)</strong>: 通过中间件的方式，先从当前请求信息中获取关注字段，放入res.locals中，只在本次请求中有效，放入当前请求相关信息。<br>代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 允许在视图代码(如ejs文件)中访问config对象了</span></div><div class="line">app.locals.config = config;</div><div class="line"></div><div class="line"><span class="comment">// 使用一个在路由之前的中间件来给res.locals赋值，就可以在视图代码(如ejs文件)中访问当前访问的query信息了</span></div><div class="line">app.use(<span class="function"><span class="keyword">function</span><span class="params">(req, res, next)</span> </span>{</div><div class="line">  res.locals.query = req.query;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>当然，为了灵活起见，也可以在任意路由处理过程中或者渲染前赋值给res.locals一些当前状态，从而避免在render函数中传递参数，不过app.locals就不太建议这样做，而是应该统一放在一起，比如app.js内，内容嘛，应该是与本次请求无关的信息了，比如config配置等。</p>
+<h2 id="小结">小结</h2>
+<p>从概念上来看新版本更清晰更易于理解了。如果有在看byvoid的《Node.js基础开发指南》的朋友，如果按照那本书上的代码发现在Express 3.x+下无法运行的话，可以按照这点修改一下，慢慢的就会适应这种新形式。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Node.js的视图模板EJS经常需要访问程序代码中的值或者函数调用，一种方式是通过render传参数来让视图获取对象，但是如果一些经常用到的，每次渲染视图的时候都传就不太推荐了，今天看到了一个静态视图助手(dynamicHelpers)和动态视图助手(helpers)的概]]>
+    </summary>
+    
+      <category term="node.js" scheme="http://120910383.github.io/tags/node-js/"/>
+    
+      <category term="express" scheme="http://120910383.github.io/tags/express/"/>
+    
+      <category term="dynamic helpers" scheme="http://120910383.github.io/tags/dynamic-helpers/"/>
+    
+      <category term="static helpers" scheme="http://120910383.github.io/tags/static-helpers/"/>
+    
+      <category term="migrating" scheme="http://120910383.github.io/tags/migrating/"/>
+    
+      <category term="NodeJS" scheme="http://120910383.github.io/categories/NodeJS/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[与Node.js的第一次接触]]></title>
     <link href="http://120910383.github.io/2014/10/30/hello-world-nodejs/"/>
     <id>http://120910383.github.io/2014/10/30/hello-world-nodejs/</id>
     <published>2014-10-30T03:19:33.000Z</published>
-    <updated>2014-10-30T08:27:10.000Z</updated>
-    <content type="html"><![CDATA[<p>离职之后这段时间，慢慢的心态调整过来了，对什么都有兴趣，什么都想学，由于之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，反正之前是对web开发抱有不屑的想法，不过慢慢的在最近几年工作中接触到了一些脚本语言之后，发现每种语言都有其各自适用的地方，想写个小工具整理下文件用C简直是自虐，想写个小一点的测试用的http服务器直接用C++、boost::asio又会有种杀鸡用牛刀的感觉，后来用AndroidStudio真真正正开发了一款android app之后，才觉得学百家之长进而达到无招胜有招才是最光明最有前途的想法，于是发了疯似的开始看html5、css3、javascript三贱客，这不现在又开始接触Node了，而且在近一个月的学习中，逐渐发现了一个惊天结论——哈哈自己感受，javascript这个之前很不屑的小东西将来很有可能实现前段后端移动端大统一。</p>
-<p>作为一个C/C++程序员，这样来说太灭自家门面了，但是不得不承认javascript的势头实在是越来越旺，服务器端的node.js，浏览器的dom模型，以及跨移动端android、ios、wp8的webview，全部都可以用javascript来写，甚至一些轻度的社交游戏，都可以用cocos2d-x新出的javascript框架引擎开发，所以对于个人或者小规模团队来说使用javascript能够快速的构建整个产品线。</p>
-<p>说到这里，我觉得现在学javascript都有点太迟了，如果用一个比喻的话，C/C++就是一个德高望重的老头，严谨并且有经验能力高，而javascript、ruby之类的就如同嘻嘻哈哈的运动少年，给人很多的新鲜感和活力，说到这里就想提下ruby，因为它是给我惊喜让我走出C/C++的第一个语言，记得最开始接触它的时候，有一句话印象非常深刻——<strong>所有事物都是对象</strong>，当时根本不能想象循环可以这样使用</p>
+    <updated>2014-10-31T14:07:44.000Z</updated>
+    <content type="html"><![CDATA[<p>离职之后的这段时间，心态慢慢地调整过来了，对什么技术都感兴趣，都想去学，我之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，最开始对web开发抱有不屑的想法，不过在最近几年工作中接触了一些脚本语言之后，发现每种语言都有其各自适用的地方，比如，想写个小工具整理下文件如果用C去写简直是自虐，想写个小一点的测试服务器直接用C++、boost::asio又会有一种杀鸡用牛刀的感觉，后来用AndroidStudio真真正正开发了一款android app之后，才觉得学百家之长进而达到无招胜有招才是最光明最有前途的想法，于是开始看起html5、css3、javascript这三贱客，现在又开始接触Node了，而且在近一个月的学习中，逐渐发现了一个惊天结论——哈哈自己感受，javascript这个之前很不屑的小东西将来很有可能实现前段后端移动端大统一。</p>
+<p>作为一个C/C++程序员，这样来说有点自毁门面，但是不得不承认javascript的势头实在是越来越旺，服务器端的node.js，浏览器的dom模型，以及跨移动端android、ios、wp8的webview，全部都可以用javascript来写，甚至一些轻度的社交游戏，都可以用cocos2d-x新出的javascript框架引擎开发。</p>
+<p>如果用一个比喻的话，C/C++就是一个德高望重的老头，严谨并且有经验能力高，而javascript、ruby之类的就如同潮流青年，给人很多的新鲜感和活力，说到这里就想提下ruby，因为它是给我惊喜让我走出C/C++的第一个语言，记得最开始接触它的时候，有一句话印象非常深刻——<strong>所有事物都是对象</strong>，当时根本想象不到循环可以这样使用</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ruby代码</span></div><div class="line"><span class="comment"># 循环五次输出hello,world</span></div><div class="line"><span class="number">5</span>.times <span class="keyword">do</span></div><div class="line">  print <span class="string">"hello,world/n"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 
-<p>加上别人的说法和自己亲身感受，ruby真的像是艺术家用的语言，非常文艺和有美感，不过后来很可惜，由于当时仅仅是感兴趣，并没有实际的项目驱动来使用ruby，导致没有再继续深入的学习下去，加上那段时间工作比较忙，和ruby的接触算是告一段落。而对于javascript的学习，则是由于最近开发的应用需要服务端支持，用C++吧太大材小用，而且各种库boost、poco的调用又比较复杂，很多还要现学，没有经验直接写服务器很难稳定，加上仅仅是应用服务器而已，就限定在脚本语言中去找，找来找去就定下了同样使用Javascript的备受推崇的Node.js。</p>
+<p>ruby像是艺术家用的语言，非常文艺和有美感，不过后来很可惜，由于当时仅仅是感兴趣，并没有实际的项目驱动来使用ruby，导致没再继续深入的学习下去，加上那段时间工作比较忙，和ruby的接触算是告一段落。而对于javascript的学习，则是由于最近开发的应用需要服务端支持，用C++吧太大材小用，而且各种库boost、poco的调用又比较复杂，很多还要现学，没有经验直接写服务器很难稳定，加上仅仅是应用服务器而已，就限定在脚本语言中去找，找来找去就定下了基于Javascript的Node.js。</p>
 <h2 id="Node-js在windows下的安装">Node.js在windows下的安装</h2>
 <p>Node.js简单来说，就是一个让javascript跑在浏览器之外的一个运行环境，由于其对网络的支持非常完善，所以大都被用在服务器开发上，Node.js的官网是<a href="http://www.nodejs.org/" target="_blank" rel="external">http://www.nodejs.org/</a> ，从上面下载windows安装包一直点下一步即可安装，安装完成后在命令行里输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node --version</div></pre></td></tr></table></figure>
@@ -33,10 +118,10 @@
 <p>出现版本号则说明安装成功</p>
 <h2 id="WebStrom9的安装">WebStrom9的安装</h2>
 <p>在windwows下开发没有一个好的IDE工具是很痛苦的事情，开发C/C++使用微软的visual studio已经是共识了，但是对于非.net的web开发，我这里强烈推荐一个东西就是webstorm，官网是<a href="http://www.jetbrains.com/webstorm/" target="_blank" rel="external">http://www.jetbrains.com/webstorm/</a> ，开发公司是jetbrains，这个公司开发的几款IDE都是非常不错的，我现在正在使用的AndroidStudio就是Google基于该公司的产品开发出来的，所以如果你是windows开发者，想在windows下找一款稍微可以和微软抗衡的开发工具，就去jetbrains的主页上找找看吧，总有一款你能用得到的。</p>
-<p>这里说明安装方法，其实只要是在windows下，安装都很简单，一直下一步就可以了，最后一步启动时会让你选择按键和主题，我的按键类型选择的是visual studio，主题选择的是Darcula，最后的启动界面是这样子的<br><img src="images/webstorm_start_page.png" alt="WebStorm启动界面"></p>
+<p>这里说明安装方法，其实只要是在windows下，安装都很简单，一直下一步就可以了，最后一步启动时会让你选择按键和主题，我的按键类型选择的是visual studio，主题选择的是Darcula，最后的启动界面是这样子的<br><img src="/images/webstorm_start_page.png" alt="WebStorm启动界面"></p>
 <h2 id="创建Node-js项目">创建Node.js项目</h2>
 <p>接下来要讨论的都是基于WebStrom开发环境的一些操作，node.js的命令行式的编辑运行就不说了，事实上我既不擅长也不太感兴趣，在windows上开发本来就是享受鼠标点来点去的感觉，非要做的类似vim式的黑客手法，实在是做不来，不过由于IDE毕竟功能有限，对于WebStrom不提供的一些操作，还是需要在命令行里执行命令的，一切以方便为准。</p>
-<p>首先在webstrom的开始界面上选择”Create New Project”接下来会弹出<br><img src="images/webstrom_create_new_project.png" alt="WebStom新建项目"><br>为了更好的演示，这里选择”Empty project”，确定后建立项目，这时在文件夹下面除了.idea项目配置文件外，是没有任何文件生成的，需要我们新建一个javascript来执行，在左侧项目上右键New=&gt;JavaScript File建立一个helloworld.js文件，然后写入如下代码</p>
+<p>首先在webstrom的开始界面上选择”Create New Project”接下来会弹出<br><img src="/images/webstrom_create_new_project.png" alt="WebStom新建项目"><br>为了更好的演示，这里选择”Empty project”，确定后建立项目，这时在文件夹下面除了.idea项目配置文件外，是没有任何文件生成的，需要我们新建一个javascript来执行，在左侧项目上右键New=&gt;JavaScript File建立一个helloworld.js文件，然后写入如下代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// javascript代码</span></div><div class="line"><span class="comment">// 返回本次请求头信息的http服务端</span></div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>{</div><div class="line">  response.write(<span class="built_in">JSON</span>.stringify(request.headers));</div><div class="line">  response.end();</div><div class="line">}).listen(<span class="number">8888</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server start at 8888'</span>);</div></pre></td></tr></table></figure>
 
 <p>输入完成后，执行菜单run=&gt;run…选择该文件执行，就这样，一个微型的http服务器就建成了，打开浏览器访问localhost:8888即可看到请求头信息，不需要apache,nginx之类的http服务器帮助，node本身已经内置了监听http请求的功能，下面来说一下这几句代码的作用</p>
@@ -62,7 +147,7 @@
 <p>至此，这段简洁而不简单的Node写成的http高效服务器就介绍完了，后面我也会不定时的把自己学习Node的心得写上来，一是分享给搜索引擎帮助更多人，二是通过写的方式梳理自己理解的知识，加深印象。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>离职之后这段时间，慢慢的心态调整过来了，对什么都有兴趣，什么都想学，由于之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，反正之前是对web开发抱有不屑的想法，不过慢慢的在最近几年工作中接触]]>
+    <![CDATA[<p>离职之后的这段时间，心态慢慢地调整过来了，对什么技术都感兴趣，都想去学，我之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，最开始对web开发抱有不屑的想法，不过在最近几年工作中接触了一些脚]]>
     </summary>
     
       <category term="node.js" scheme="http://120910383.github.io/tags/node-js/"/>
@@ -80,12 +165,12 @@
     <link href="http://120910383.github.io/2014/10/29/my-first-blog/"/>
     <id>http://120910383.github.io/2014/10/29/my-first-blog/</id>
     <published>2014-10-29T12:21:21.000Z</published>
-    <updated>2014-10-30T08:48:51.000Z</updated>
+    <updated>2014-10-31T15:38:58.000Z</updated>
     <content type="html"><![CDATA[<h2 id="开始">开始</h2>
 <p>最近一段时间在搞<a href="http://www.nodejs.org/" title="官网" target="_blank" rel="external">node.js</a>，又一次不经意间翻到<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>这个小东西，再加上之前一直想做一个记录自己学习开发和生活的博客，今天正好懒的码代码了，就抽时间拿来研究了一下，折腾了一下午，终于搞清楚了一些基本的设置项，然后用它生成<a href="http://baike.baidu.com/view/348763.htm/" title="什么是静态网页" target="_blank" rel="external">纯静态的网页</a>，部署到了<a href="https://github.com/120910383/" title="我的github" target="_blank" rel="external">我的github</a>上当作博客用了，现在看到的这篇“hello world”就是第一次用<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>发布的。</p>
 <h2 id="回顾">回顾</h2>
 <p>关于博客，我记得上大学的时候就有过写的想法，那时候正好有个<a href="http://user.qzone.qq.com/120910383/" title="我的QZone" target="_blank" rel="external">QZone</a>比较流行，周围同学也都在用它，自己偶尔也会写一点东西，现在想想确实提供了很大便利，不用自己架站写<a href="http://baike.baidu.com/view/383720.htm/" title="什么是html" target="_blank" rel="external">html</a>就能发表文章展示自己。不过后来渐渐觉得用腾讯的东西太低格(帅哥美女装扮什么的太花哨)，于是转战新浪博客，这算是第一次真正意义上的博客吧，功能朴实专业多了，不过最后还是没坚持下来，写了几篇文章后就搁在那几年没动了，之后开过纯技术的<a href="http://blog.csdn.net/youyana1/" title="我的csdn博客" target="_blank" rel="external">csdn博客</a>，也是三篇不到就放弃，也尝试过搭建<a href="http://cn.wordpress.org/" title="官网" target="_blank" rel="external">wordpress</a>，发现驾驭不了，太复杂，光写文章都嫌费事还要处理一个网站，尤其附带着数据库，<a href="http://php.net/" title="官网" target="_blank" rel="external">php</a>脚本什么的，想想都麻烦，结果也不了了之。直到去年，才接触到了这么一个东西——静态网页生成器，发现确实是我想要的功能，使用<a href="http://wowubuntu.com/markdown/" title="markdown快速入门" target="_blank" rel="external">markdown</a>语法写<a href="http://baike.baidu.com/view/383720.htm/" title="什么是html" target="_blank" rel="external">html</a>能省下不少事情，最重要的是，生成的文章全部都是一篇一篇<a href="http://baike.baidu.com/view/348763.htm/" title="什么是静态网页" target="_blank" rel="external">静态的网页</a>，非常清爽。</p>
-<p>不过最开始接触的倒不是<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，而是<a href="http://jekyllcn.com/" title="jekyll中文镜像" target="_blank" rel="external">jekyll</a>，一款<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>写的博客程序，后者是在去年年底看<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>文档的时候了解的，<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>也对其提供了官方支持，也下载下来尝试了一番，不过当时对<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>不熟悉，总感觉对它的开发语言不了解的情况下用起来会有一种恐惧感，不晓得哪天出问题不会处理，再加上自己的懒惰，就一直没动它。直到最近开始学<a href="http://www.nodejs.org/" title="官网" target="_blank" rel="external">node.js</a>开发，才又接触了<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，于是又一次的建了一个[新的博客][]，我想这次应该是要坚持写下去了。</p>
+<p>不过最开始接触的倒不是<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，而是<a href="http://jekyllcn.com/" title="jekyll中文镜像" target="_blank" rel="external">jekyll</a>，一款<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>写的博客程序，后者是在去年年底看<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>文档的时候了解的，<a href="https://github.com/" title="官网" target="_blank" rel="external">github</a>也对其提供了官方支持，也下载下来尝试了一番，不过当时对<a href="https://ruby-china.org/" title="国内最大的ruby中文社区" target="_blank" rel="external">ruby</a>不熟悉，总感觉对它的开发语言不了解的情况下用起来会有一种恐惧感，不晓得哪天出问题不会处理，再加上自己的懒惰，就一直没动它。直到最近开始学<a href="http://www.nodejs.org/" title="官网" target="_blank" rel="external">node.js</a>开发，才又接触了<a href="http://hexo.io/" title="官网" target="_blank" rel="external">hexo</a>，于是又一次的建了一个<a href="/" title="本博客">新的博客</a>，我想这次应该是要坚持写下去了。</p>
 <h2 id="关于博客这些事">关于博客这些事</h2>
 <p>上面说了那么多，之前一直没坚持下来，外部原因是一方面，其实我自己也知道，真正的原因是，我一直都不太喜欢展示自己，包括经历了什么事，或是自己的看法、感想之类的。总觉得自己这样完完全全被别人看到、评论、不屑、甚至反对是一件很不自在的事情，我也不愿意别人看到我过的不好，过的很屌丝，过的非常乏味。把自己隐藏起来多好，包裹的厚厚的，很神秘很深沉的样子，别人不知道你的性格，不知道你的经历，即便交朋友你在网络上也完完全全是一个化身，和现实生活完全区分开来。可是，生活中的一些事情，编程中一些问题，和绞尽脑汁豁然开朗的解决方法，又让我一直有一种很强烈的写作欲望，想把它们分享出去，一方面希望获得别人的认可，给自己进一步的动力，另一方面，将来无论求职认识朋友，都是一个可以让对方快速了解自己的渠道，再者就是将来可以有一个让自己回顾过去经历的地方。</p>
 <h2 id="计划">计划</h2>

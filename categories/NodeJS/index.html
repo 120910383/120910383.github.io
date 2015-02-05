@@ -77,6 +77,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-express-static-dynamic-helpers" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/11/03/express-static-dynamic-helpers/" class="article-date">
+  <time datetime="2014-11-03T04:15:59.000Z" itemprop="datePublished">11月 3 2014</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/NodeJS/">NodeJS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/11/03/express-static-dynamic-helpers/">Express的静态动态视图助手</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Node.js的视图模板EJS经常需要访问程序代码中的值或者函数调用，一种方式是通过render传参数来让视图获取对象，但是如果一些经常用到的，每次渲染视图的时候都传就不太推荐了，今天看到了一个静态视图助手(dynamicHelpers)和动态视图助手(helpers)的概念，有一些心得，记录一下。</p>
+<h2 id="Express_2-x">Express 2.x</h2>
+<p>静动态视图助手在express的3.x版本中改动比较大，这里先回顾一下旧有版本的概念。<br><strong>静态视图助手(helpers)</strong>: 可以是任何类型的对象，包括接受任意参数的函数，但是访问到的对象必须是与用户请求无关的。<br><strong>动态视图助手(dynamicHelpers)</strong>: 只能是一个函数，这个函数不能接受参数，但是可以访问req和res对象。<br>代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 允许在views视图代码(如ejs文件)中访问test对象和add函数了，这个函数是个静态的，只提供和本次请求无关的功能</span></div><div class="line">app.helpers({</div><div class="line">  test: custom,</div><div class="line">  add: <span class="function"><span class="keyword">function</span><span class="params">(a, b)</span> </span>{</div><div class="line">    <span class="keyword">return</span> a + b;</div><div class="line">  }</div><div class="line">});</div><div class="line"></div><div class="line"><span class="comment">// 允许在views视图代码(如ejs文件)中访问query函数了，这个函数是动态的，可以获取到当前请求的query字段</span></div><div class="line">app.dynamicHelpers({</div><div class="line">  query: <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> </span>{</div><div class="line">    <span class="keyword">return</span> req.query;</div><div class="line">  }</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<h2 id="Express_3-x+">Express 3.x+</h2>
+<p>在Express 3.x中，静动态视图助手的概念稍微不同，自己总结的，不知道对不对。<br><strong>静态视图助手(app.locals)</strong>: 放入app.locals的对象都可以在视图代码中直接访问，这些对象和当前请求信息无关系。<br><strong>动态视图助手(res.locals)</strong>: 通过中间件的方式，先从当前请求信息中获取关注字段，放入res.locals中，只在本次请求中有效，放入当前请求相关信息。<br>代码如下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 允许在视图代码(如ejs文件)中访问config对象了</span></div><div class="line">app.locals.config = config;</div><div class="line"></div><div class="line"><span class="comment">// 使用一个在路由之前的中间件来给res.locals赋值，就可以在视图代码(如ejs文件)中访问当前访问的query信息了</span></div><div class="line">app.use(<span class="function"><span class="keyword">function</span><span class="params">(req, res, next)</span> </span>{</div><div class="line">  res.locals.query = req.query;</div><div class="line">});</div></pre></td></tr></table></figure>
+
+<p>当然，为了灵活起见，也可以在任意路由处理过程中或者渲染前赋值给res.locals一些当前状态，从而避免在render函数中传递参数，不过app.locals就不太建议这样做，而是应该统一放在一起，比如app.js内，内容嘛，应该是与本次请求无关的信息了，比如config配置等。</p>
+<h2 id="小结">小结</h2>
+<p>从概念上来看新版本更清晰更易于理解了。如果有在看byvoid的《Node.js基础开发指南》的朋友，如果按照那本书上的代码发现在Express 3.x+下无法运行的话，可以按照这点修改一下，慢慢的就会适应这种新形式。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://120910383.github.io/2014/11/03/express-static-dynamic-helpers/" data-id="948erjyuybf0uffp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dynamic-helpers/">dynamic helpers</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/express/">express</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/migrating/">migrating</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/static-helpers/">static helpers</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world-nodejs" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/10/30/hello-world-nodejs/" class="article-date">
@@ -103,12 +157,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>离职之后这段时间，慢慢的心态调整过来了，对什么都有兴趣，什么都想学，由于之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，反正之前是对web开发抱有不屑的想法，不过慢慢的在最近几年工作中接触到了一些脚本语言之后，发现每种语言都有其各自适用的地方，想写个小工具整理下文件用C简直是自虐，想写个小一点的测试用的http服务器直接用C++、boost::asio又会有种杀鸡用牛刀的感觉，后来用AndroidStudio真真正正开发了一款android app之后，才觉得学百家之长进而达到无招胜有招才是最光明最有前途的想法，于是发了疯似的开始看html5、css3、javascript三贱客，这不现在又开始接触Node了，而且在近一个月的学习中，逐渐发现了一个惊天结论——哈哈自己感受，javascript这个之前很不屑的小东西将来很有可能实现前段后端移动端大统一。</p>
-<p>作为一个C/C++程序员，这样来说太灭自家门面了，但是不得不承认javascript的势头实在是越来越旺，服务器端的node.js，浏览器的dom模型，以及跨移动端android、ios、wp8的webview，全部都可以用javascript来写，甚至一些轻度的社交游戏，都可以用cocos2d-x新出的javascript框架引擎开发，所以对于个人或者小规模团队来说使用javascript能够快速的构建整个产品线。</p>
-<p>说到这里，我觉得现在学javascript都有点太迟了，如果用一个比喻的话，C/C++就是一个德高望重的老头，严谨并且有经验能力高，而javascript、ruby之类的就如同嘻嘻哈哈的运动少年，给人很多的新鲜感和活力，说到这里就想提下ruby，因为它是给我惊喜让我走出C/C++的第一个语言，记得最开始接触它的时候，有一句话印象非常深刻——<strong>所有事物都是对象</strong>，当时根本不能想象循环可以这样使用</p>
+        <p>离职之后的这段时间，心态慢慢地调整过来了，对什么技术都感兴趣，都想去学，我之前是用cocos2d-x做C++游戏开发的，所以或多或少有点性能主义，每个人心中都会有几门自己崇尚的语言，同时也会有一些鄙视的语言，最开始对web开发抱有不屑的想法，不过在最近几年工作中接触了一些脚本语言之后，发现每种语言都有其各自适用的地方，比如，想写个小工具整理下文件如果用C去写简直是自虐，想写个小一点的测试服务器直接用C++、boost::asio又会有一种杀鸡用牛刀的感觉，后来用AndroidStudio真真正正开发了一款android app之后，才觉得学百家之长进而达到无招胜有招才是最光明最有前途的想法，于是开始看起html5、css3、javascript这三贱客，现在又开始接触Node了，而且在近一个月的学习中，逐渐发现了一个惊天结论——哈哈自己感受，javascript这个之前很不屑的小东西将来很有可能实现前段后端移动端大统一。</p>
+<p>作为一个C/C++程序员，这样来说有点自毁门面，但是不得不承认javascript的势头实在是越来越旺，服务器端的node.js，浏览器的dom模型，以及跨移动端android、ios、wp8的webview，全部都可以用javascript来写，甚至一些轻度的社交游戏，都可以用cocos2d-x新出的javascript框架引擎开发。</p>
+<p>如果用一个比喻的话，C/C++就是一个德高望重的老头，严谨并且有经验能力高，而javascript、ruby之类的就如同潮流青年，给人很多的新鲜感和活力，说到这里就想提下ruby，因为它是给我惊喜让我走出C/C++的第一个语言，记得最开始接触它的时候，有一句话印象非常深刻——<strong>所有事物都是对象</strong>，当时根本想象不到循环可以这样使用</p>
 <figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ruby代码</span></div><div class="line"><span class="comment"># 循环五次输出hello,world</span></div><div class="line"><span class="number">5</span>.times <span class="keyword">do</span></div><div class="line">  print <span class="string">"hello,world/n"</span></div><div class="line"><span class="keyword">end</span></div></pre></td></tr></table></figure>
 
-<p>加上别人的说法和自己亲身感受，ruby真的像是艺术家用的语言，非常文艺和有美感，不过后来很可惜，由于当时仅仅是感兴趣，并没有实际的项目驱动来使用ruby，导致没有再继续深入的学习下去，加上那段时间工作比较忙，和ruby的接触算是告一段落。而对于javascript的学习，则是由于最近开发的应用需要服务端支持，用C++吧太大材小用，而且各种库boost、poco的调用又比较复杂，很多还要现学，没有经验直接写服务器很难稳定，加上仅仅是应用服务器而已，就限定在脚本语言中去找，找来找去就定下了同样使用Javascript的备受推崇的Node.js。</p>
+<p>ruby像是艺术家用的语言，非常文艺和有美感，不过后来很可惜，由于当时仅仅是感兴趣，并没有实际的项目驱动来使用ruby，导致没再继续深入的学习下去，加上那段时间工作比较忙，和ruby的接触算是告一段落。而对于javascript的学习，则是由于最近开发的应用需要服务端支持，用C++吧太大材小用，而且各种库boost、poco的调用又比较复杂，很多还要现学，没有经验直接写服务器很难稳定，加上仅仅是应用服务器而已，就限定在脚本语言中去找，找来找去就定下了基于Javascript的Node.js。</p>
 <h2 id="Node-js在windows下的安装">Node.js在windows下的安装</h2>
 <p>Node.js简单来说，就是一个让javascript跑在浏览器之外的一个运行环境，由于其对网络的支持非常完善，所以大都被用在服务器开发上，Node.js的官网是<a href="http://www.nodejs.org/" target="_blank" rel="external">http://www.nodejs.org/</a> ，从上面下载windows安装包一直点下一步即可安装，安装完成后在命令行里输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node --version</div></pre></td></tr></table></figure>
@@ -116,10 +170,10 @@
 <p>出现版本号则说明安装成功</p>
 <h2 id="WebStrom9的安装">WebStrom9的安装</h2>
 <p>在windwows下开发没有一个好的IDE工具是很痛苦的事情，开发C/C++使用微软的visual studio已经是共识了，但是对于非.net的web开发，我这里强烈推荐一个东西就是webstorm，官网是<a href="http://www.jetbrains.com/webstorm/" target="_blank" rel="external">http://www.jetbrains.com/webstorm/</a> ，开发公司是jetbrains，这个公司开发的几款IDE都是非常不错的，我现在正在使用的AndroidStudio就是Google基于该公司的产品开发出来的，所以如果你是windows开发者，想在windows下找一款稍微可以和微软抗衡的开发工具，就去jetbrains的主页上找找看吧，总有一款你能用得到的。</p>
-<p>这里说明安装方法，其实只要是在windows下，安装都很简单，一直下一步就可以了，最后一步启动时会让你选择按键和主题，我的按键类型选择的是visual studio，主题选择的是Darcula，最后的启动界面是这样子的<br><img src="images/webstorm_start_page.png" alt="WebStorm启动界面"></p>
+<p>这里说明安装方法，其实只要是在windows下，安装都很简单，一直下一步就可以了，最后一步启动时会让你选择按键和主题，我的按键类型选择的是visual studio，主题选择的是Darcula，最后的启动界面是这样子的<br><img src="/images/webstorm_start_page.png" alt="WebStorm启动界面"></p>
 <h2 id="创建Node-js项目">创建Node.js项目</h2>
 <p>接下来要讨论的都是基于WebStrom开发环境的一些操作，node.js的命令行式的编辑运行就不说了，事实上我既不擅长也不太感兴趣，在windows上开发本来就是享受鼠标点来点去的感觉，非要做的类似vim式的黑客手法，实在是做不来，不过由于IDE毕竟功能有限，对于WebStrom不提供的一些操作，还是需要在命令行里执行命令的，一切以方便为准。</p>
-<p>首先在webstrom的开始界面上选择”Create New Project”接下来会弹出<br><img src="images/webstrom_create_new_project.png" alt="WebStom新建项目"><br>为了更好的演示，这里选择”Empty project”，确定后建立项目，这时在文件夹下面除了.idea项目配置文件外，是没有任何文件生成的，需要我们新建一个javascript来执行，在左侧项目上右键New=&gt;JavaScript File建立一个helloworld.js文件，然后写入如下代码</p>
+<p>首先在webstrom的开始界面上选择”Create New Project”接下来会弹出<br><img src="/images/webstrom_create_new_project.png" alt="WebStom新建项目"><br>为了更好的演示，这里选择”Empty project”，确定后建立项目，这时在文件夹下面除了.idea项目配置文件外，是没有任何文件生成的，需要我们新建一个javascript来执行，在左侧项目上右键New=&gt;JavaScript File建立一个helloworld.js文件，然后写入如下代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// javascript代码</span></div><div class="line"><span class="comment">// 返回本次请求头信息的http服务端</span></div><div class="line"><span class="keyword">var</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</div><div class="line">http.createServer(<span class="function"><span class="keyword">function</span><span class="params">(request, response)</span> </span>{</div><div class="line">  response.write(<span class="built_in">JSON</span>.stringify(request.headers));</div><div class="line">  response.end();</div><div class="line">}).listen(<span class="number">8888</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'Server start at 8888'</span>);</div></pre></td></tr></table></figure>
 
 <p>输入完成后，执行菜单run=&gt;run…选择该文件执行，就这样，一个微型的http服务器就建成了，打开浏览器访问localhost:8888即可看到请求头信息，不需要apache,nginx之类的http服务器帮助，node本身已经内置了监听http请求的功能，下面来说一下这几句代码的作用</p>
@@ -147,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://120910383.github.io/2014/10/30/hello-world-nodejs/" data-id="r8arol41rs4gzuqe" class="article-share-link">Share</a>
+      <a data-url="http://120910383.github.io/2014/10/30/hello-world-nodejs/" data-id="96kqcnoxq6pplxyf" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello-world/">hello world</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node-js/">node.js</a></li></ul>
@@ -168,7 +222,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">其他</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NodeJS/">NodeJS</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/other/">其他</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">游戏</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/cycling/">骑行</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -177,7 +231,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/">hello world</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape/">landscape</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape-plus/">landscape-plus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game/">Game</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Heroes-of-the-Storm/">Heroes of the Storm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alpha/">alpha</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dynamic-helpers/">dynamic helpers</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/express/">express</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/">hello world</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape/">landscape</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape-plus/">landscape-plus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/migrating/">migrating</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node-js/">node.js</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static-helpers/">static helpers</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/健身/">健身</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏/">游戏</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/锻炼/">锻炼</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/风暴英雄/">风暴英雄</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/骑行/">骑行</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -186,7 +240,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/hello-world/" style="font-size: 10.00px;">hello world</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/landscape/" style="font-size: 10.00px;">landscape</a><a href="/tags/landscape-plus/" style="font-size: 10.00px;">landscape-plus</a><a href="/tags/node-js/" style="font-size: 20.00px;">node.js</a>
+      <a href="/tags/Game/" style="font-size: 10.00px;">Game</a><a href="/tags/Heroes-of-the-Storm/" style="font-size: 10.00px;">Heroes of the Storm</a><a href="/tags/alpha/" style="font-size: 10.00px;">alpha</a><a href="/tags/dynamic-helpers/" style="font-size: 10.00px;">dynamic helpers</a><a href="/tags/express/" style="font-size: 10.00px;">express</a><a href="/tags/hello-world/" style="font-size: 10.00px;">hello world</a><a href="/tags/hexo/" style="font-size: 10.00px;">hexo</a><a href="/tags/javascript/" style="font-size: 10.00px;">javascript</a><a href="/tags/landscape/" style="font-size: 10.00px;">landscape</a><a href="/tags/landscape-plus/" style="font-size: 10.00px;">landscape-plus</a><a href="/tags/migrating/" style="font-size: 10.00px;">migrating</a><a href="/tags/node-js/" style="font-size: 20.00px;">node.js</a><a href="/tags/static-helpers/" style="font-size: 10.00px;">static helpers</a><a href="/tags/健身/" style="font-size: 10.00px;">健身</a><a href="/tags/游戏/" style="font-size: 10.00px;">游戏</a><a href="/tags/锻炼/" style="font-size: 10.00px;">锻炼</a><a href="/tags/风暴英雄/" style="font-size: 10.00px;">风暴英雄</a><a href="/tags/骑行/" style="font-size: 10.00px;">骑行</a>
     </div>
   </div>
 
@@ -195,7 +249,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/11/">November 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">October 2014</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -205,6 +259,18 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2014/11/04/cycling-oriental-land/">骑行东方绿舟</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/04/storm-heroes-alpha/">喜获风暴英雄技术测试资格（alpha版）</a>
+          </li>
+        
+          <li>
+            <a href="/2014/11/03/express-static-dynamic-helpers/">Express的静态动态视图助手</a>
+          </li>
         
           <li>
             <a href="/2014/10/30/hello-world-nodejs/">与Node.js的第一次接触</a>
@@ -226,7 +292,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2014 长弓水告<br>
+      &copy; 2015 长弓水告<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

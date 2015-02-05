@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://120910383.github.io/2014/11/04/cycling-oriental-land/</loc>
+    <lastmod>2014-11-04T15:13:06.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://120910383.github.io/2014/11/04/storm-heroes-alpha/</loc>
+    <lastmod>2014-11-04T14:56:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://120910383.github.io/2014/11/03/express-static-dynamic-helpers/</loc>
+    <lastmod>2014-11-04T14:06:02.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://120910383.github.io/2014/10/29/my-first-blog/</loc>
-    <lastmod>2014-10-30T08:48:51.000Z</lastmod>
+    <lastmod>2014-10-31T15:38:58.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://120910383.github.io/2014/10/30/hello-world-nodejs/</loc>
-    <lastmod>2014-10-30T08:27:10.000Z</lastmod>
+    <lastmod>2014-10-31T14:07:44.000Z</lastmod>
   </url>
   
 </urlset>
